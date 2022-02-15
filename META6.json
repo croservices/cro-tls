@@ -6,7 +6,7 @@
     "tags"          : [ "SSL", "TLS" ],
     "authors"       : [ "Jonathan Worthington <jnthn@jnthn.net>" ],
     "license"       : "Artistic-2.0",
-    "depends"       : [ "Cro::Core:ver<0.8.7>", "IO::Socket::Async::SSL:ver<0.7.8+>" ],
+    "depends"       : [ "Cro::Core:ver<0.8.7>", "IO::Socket::Async::SSL:ver<0.7.10+>" ],
     "provides"      : {
         "Cro::TLS": "lib/Cro/TLS.pm6"
     },
