@@ -2,6 +2,7 @@
     "perl"          : "6.*",
     "name"          : "Cro::TLS",
     "version"       : "0.8.7",
+    "auth"          : "zef:cro",
     "description"   : "Cro pipeline components for building services that use TLS.",
     "tags"          : [ "SSL", "TLS" ],
     "authors"       : [ "Jonathan Worthington <jnthn@jnthn.net>" ],
