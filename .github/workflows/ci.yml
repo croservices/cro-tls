@@ -14,7 +14,6 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
-          - macOS-latest
           - windows-latest
         raku-version:
           - "2021.03"
@@ -29,4 +28,4 @@ jobs:
       - name: Setup dependencies
         run: raku -v && zef install --deps-only .
       - name: Test code
-        run: zef test .
+        run: prove -e 'raku -Ilib' t/ xt/
