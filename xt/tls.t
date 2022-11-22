@@ -5,21 +5,11 @@ use IO::Socket::Async::SSL;
 use Test;
 
 constant TEST_PORT = 31315;
-constant %ca := { ca-file => 't/certs-and-keys/ca-crt.pem' };
+constant %ca := { ca-file => 'xt/certs-and-keys/ca-crt.pem' };
 constant %key-cert := {
-    private-key-file => 't/certs-and-keys/server-key.pem',
-    certificate-file => 't/certs-and-keys/server-crt.pem'
+    private-key-file => 'xt/certs-and-keys/server-key.pem',
+    certificate-file => 'xt/certs-and-keys/server-crt.pem'
 };
-
-# Type relationships.
-ok Cro::TLS::Listener ~~ Cro::Source, 'TLS listener is a source';
-ok Cro::TLS::Listener.produces ~~ Cro::TLS::ServerConnection, 'TLS listener produces connections';
-ok Cro::TLS::ServerConnection ~~ Cro::Connection, 'TLS connection is a connection';
-ok Cro::TLS::ServerConnection ~~ Cro::Replyable, 'TLS connection is replyable';
-ok Cro::TLS::ServerConnection.produces ~~ Cro::TCP::Message, 'TLS connection produces TCP messages';
-ok Cro::TLS::Connector ~~ Cro::Connector, 'TLS connector is a connector';
-ok Cro::TLS::Connector.consumes ~~ Cro::TCP::Message, 'TLS connector consumes TCP messages';
-ok Cro::TLS::Connector.produces ~~ Cro::TCP::Message, 'TLS connector produces TCP messages';
 
 # Cro::TLS::Listener
 {
