@@ -13,7 +13,7 @@
     "IO::Socket::Async::SSL:ver<0.7.10+>"
   ],
   "provides": {
-    "Cro::TLS": "lib/Cro/TLS.pm6"
+    "Cro::TLS": "lib/Cro/TLS.rakumod"
   },
   "resources": [],
   "license": "Artistic-2.0",
